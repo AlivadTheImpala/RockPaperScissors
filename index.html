@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors!</title>
+  </head>
+  <body>
+    <p>Rock, Paper, Scissors in the console!</p>
+    <p>The machine will make a random choice</p>
+    <script>
+      let machineSelection = machineChoice();
+      console.log(machineSelection);
+
+      function machineChoice() {
+        let machineRoll = Math.floor(Math.random() * 3);
+        let result;
+        // console.log(machineRoll);
+
+        switch (machineRoll) {
+          case 0:
+            result = "rock";
+            break;
+          case 1:
+            result = "paper";
+            break;
+          case 2:
+            result = "scissors";
+        }
+        // console.log(result);
+        return result;
+      }
+    </script>
+  </body>
+</html>
