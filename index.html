@@ -16,6 +16,7 @@
       console.log(
         `The human has chosen ${humanSelection}. The machine has chosen ${machineSelection}`
       );
+      playRound(humanSelection, machineSelection);
 
       function machineChoice() {
         let machineRoll = Math.floor(Math.random() * 3); //choice will be one of 3 random numbers 0-2
@@ -43,6 +44,14 @@
         ).toLowerCase();
 
         if (humanInput) return humanInput;
+      }
+      // end humanChoice function
+
+      function playRound(humanChoice, machineChoice) {
+        //rock beats scissors
+        //scissors beats paper
+        //paper beats rock
+        console.log(humanChoice, machineChoice);
       }
     </script>
   </body>
