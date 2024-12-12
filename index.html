@@ -10,12 +10,18 @@
     <p>The machine will make a random choice</p>
     <script>
       let machineSelection = machineChoice();
-      console.log(machineSelection);
+      let humanSelection = humanChoice();
+      let humanScore = 0;
+      let machineScore = 0;
+      console.log(
+        `The human has chosen ${humanSelection}. The machine has chosen ${machineSelection}`
+      );
 
       function machineChoice() {
-        let machineRoll = Math.floor(Math.random() * 3);
-        let result;
+        let machineRoll = Math.floor(Math.random() * 3); //choice will be one of 3 random numbers 0-2
+        let result; //initialize result
 
+        //using a switch, we determine the machines "hand" using the machinesRoll and assign the value to result.
         switch (machineRoll) {
           case 0:
             result = "rock";
@@ -31,7 +37,13 @@
       }
       //end machineChoice function
 
-      function humanChoice() {}
+      function humanChoice() {
+        let humanInput = prompt(
+          "You have been challenged to Rock, Paper, Scissors. Enter your choice! "
+        ).toLowerCase();
+
+        if (humanInput) return humanInput;
+      }
     </script>
   </body>
 </html>
