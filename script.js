@@ -1,7 +1,6 @@
 let machineSelection = machineChoice();
 let humanSelection = humanChoice();
-let humanScore = 0;
-let machineScore = 0;
+
 console.log(
   `The human has chosen ${humanSelection}. The machine has chosen ${machineSelection}`
 );
@@ -47,10 +46,6 @@ function humanChoice() {
 // end humanChoice function
 
 function playRound(humanChoice, machineChoice) {
-  //rock beats scissors 0
-  //scissors beats paper 1
-  //paper beats rock 2
-  // if humanChoice == rock && machineChoice == scissors. check for a winning solution for the human, otherwise the machine wins.
   if (humanChoice === machineChoice) {
     //check if both human and machine chose the same option
     console.log("It's a tie! try again.");
@@ -65,4 +60,10 @@ function playRound(humanChoice, machineChoice) {
     //if the human didnt win, then the machine won.
     console.log("The machine has won! Computational power reigns supreme!");
   }
+}
+//end playRound function
+
+function playGame() {
+  let humanScore = 0;
+  let machineScore = 0;
 }
