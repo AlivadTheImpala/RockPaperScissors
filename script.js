@@ -32,14 +32,18 @@ function humanChoice() {
   let humanInput = prompt(
     "You have been challenged to Rock, Paper, Scissors. Enter your choice! "
   );
+
+  let result = humanInput.trim().toLowerCase();
   console.log(typeof humanInput); //if user hits cancel returns object data type, but null itself is a primitive data type. let it be known that this is the first time I have experienced this bug on my own! ^-^
 
-  if (humanInput === null) {
+  if (result === "") {
     humanInput = prompt("Please, make a choice. Or cancel...loser");
   }
   //my logic at this stage: I am checking if the user enters nothing. I thought null would be what to check, but null only applies when a user hits the cancel button. If they are hitting the cancel button, its assumed they dont want to enter anything. So rather, I think I should check if a user hits ok or enter, but doesnt actually enter anything, ie an empty string.
 
-  return humanInput.toLowerCase();
+  //update: I came up with assigning the humanInput to a result variable that trims and lowercases the input. that way after checking if result is an empty string, all we do is return the result!
+
+  return result;
 }
 // end humanChoice function
 
