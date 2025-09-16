@@ -63,7 +63,7 @@ function playRound(humanChoice, machineChoice) {
 }
 //end playRound function
 
-function playGame() {
-  let humanScore = 0;
-  let machineScore = 0;
-}
+// function playGame() {
+//   let humanScore = 0;
+//   let machineScore = 0;
+// }
